@@ -1,6 +1,6 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
+Minggu ke-: 1  
+Topik: [week1-intro-cia]  
 Nama: [Kingkin Kurnia Candrawati]  
 NIM: [230202813]  
 Kelas: [5Ikra]  
@@ -41,17 +41,7 @@ Menjalankan program dengan python caesar_cipher.py untuk menguji enkripsi dan de
 ---
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
-
-Hasil eksekusi program Caesar Cipher:
-
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
+( Hasil pengujian program mengonfirmasi bahwa aplikasi dapat melakukan enkripsi dan dekripsi dengan benar sesuai teori. Namun, kelemahan Caesar Cipher adalah mudah ditebak karena hanya bergantung pada pergeseran karakter. Oleh karena itu, metode ini tidak cukup aman untuk aplikasi yang memerlukan tingkat keamanan tinggi. Caesar Cipher lebih cocok digunakan sebagai langkah awal dalam sistem kriptografi yang lebih kompleks.)
 
 ---
 
@@ -72,10 +62,7 @@ Integritas Data (Data Integrity): Kriptografi memastikan bahwa data tidak beruba
 ---
 
 ## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
+(Buku "Pengantar Kriptografi" oleh Muh. Medriansyah Putra Kartika, diterbitkan oleh Unhas Press tahun 2024. Buku ini membahas konsep dasar Kriptografi mulai dari teori aljabar hingga algoritma kriptografi klasik dan modern dalam bahasa Indonesia. Buku cocok bagi pemula dan mahasiswa. (ISBN: 978-979-530-553-8,Rinaldi Munir :pengantar kriptografi, algoritma klasik dan modern, fungsi hash, tanda tangan digital, hingga elliptic curve cryptography lengkap dengan kode program implementasi.  )
 
 ---
 
