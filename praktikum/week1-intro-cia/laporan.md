@@ -1,28 +1,28 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
+Minggu ke-: 1 
 Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Nama: [Kingkin Kurnia Candrawati ]  
+NIM: [230202813]  
+Kelas: [5Ikra]  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+(Pembelajaran praktikum bertujuan untuk memahami dasar teori dan menerapkan algoritma kriptografi klasik serta modern melalui pembuatan kode enkripsi dan dekripsi. Praktikum ini juga bertujuan meningkatkan kemampuan analisis dan implementasi algoritma kriptografi dalam pengamanan pesan.)
 
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+(Kriptografi adalah ilmu dan seni untuk menjaga kerahasiaan pesan melalui pengkodean agar hanya pihak berhak yang dapat membacanya. Teknik dasar kriptografi meliputi cipher klasik seperti Caesar cipher, yang menggunakan pergeseran huruf, serta prinsip modular aritmetika yang mendukung algoritma enkripsi modern seperti RSA dan AES. Prinsip utama dalam kriptografi meliputi kerahasiaan, integritas, dan autentikasi, yang menjadi landasan dalam membangun sistem keamanan informasi.)
 
 ---
 
 ## 3. Alat dan Bahan
-(- Python 3.x  
-- Visual Studio Code / editor lain  
-- Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
+(Python 3.x
+
+Visual Studio Code atau editor lain
+
+Git dan akun GitHub)
 
 ---
 
@@ -36,14 +36,15 @@ Contoh format:
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
-
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
+(def encrypt(text, key):
+    result = ""
+    for char in text:
+        if char.isalpha():
+            shift = 65 if char.isupper() else 97
+            result += chr((ord(char) - shift + key) % 26 + shift)
+        else:
+            result += char
+    return result
 )
 
 ---
@@ -71,15 +72,16 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+(Praktikum ini memberikan pemahaman dasar tentang bagaimana algoritma cipher bekerja dan pentingnya keamanan dalam komunikasi digital. Penggunaan kode sederhana dapat membantu memahami prinsip-prinsip kerahasiaan dan integritas pesan.)
 
 ---
 
 ## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
+(Stallings, W. Cryptography and Network Security (2017)
+
+Schneier, B. Applied Cryptography (1996)
+
+Katz & Lindell. Introduction to Modern Cryptography (2014))
 
 ---
 
