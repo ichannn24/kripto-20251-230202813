@@ -36,15 +36,7 @@ Menjalankan program dengan python caesar_cipher.py untuk menguji enkripsi dan de
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
-
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
+(https://github.com/ichannn24/kripto-20251-230202813/edit/main/praktikum/week1-intro-cia/laporan.md)
 
 ---
 
@@ -64,14 +56,18 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
----
+- Apa saja peran kriptografi dalam keamanan informasi?
+  Kerahasiaan (Confidentiality): Kriptografi menjaga agar informasi hanya dapat diakses oleh pihak yang berwenang dengan cara mengenkripsi data. Contohnya, pesan dalam aplikasi chat dienkripsi sehingga hanya penerima yang dapat membacanya.
+
+Integritas Data (Data Integrity): Kriptografi memastikan bahwa data tidak berubah selama transmisi atau penyimpanan. Dengan algoritma hash, dapat diverifikasi bahwa data yang diterima sama dengan data yang dikirim tanpa modifikasi.
+- Apa saja komponen kriptositem?
+   -Plaintext
+   -Ciphertext
+   -Algoritma:
+  ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+(Praktikum ini memberikan pemahaman dasar tentang bagaimana algoritma cipher bekerja dan pentingnya keamanan dalam komunikasi digital. Penggunaan kode sederhana dapat membantu memahami prinsip-prinsip kerahasiaan dan integritas pesan.)
 
 ---
 
@@ -89,7 +85,7 @@ Contoh:
 ```
 commit abc12345
 Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+Date:   2025-09-5
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan )
 ```
