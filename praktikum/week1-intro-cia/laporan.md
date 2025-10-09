@@ -71,7 +71,7 @@ Integritas Data (Data Integrity): Kriptografi memastikan bahwa data tidak beruba
 Contoh:
 ```
 commit abc12345
-Author: Nama Mahasiswa <email>
+Author: Kingkin Kurnia Candrawati <email>
 Date:   2025-09-5
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan )
