@@ -70,7 +70,7 @@ Integritas Data (Data Integrity): Kriptografi memastikan bahwa data tidak beruba
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
+commit abc123456
 Author: Kingkin Kurnia Candrawati <email>
 Date:   2025-09-5
 
