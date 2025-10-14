@@ -7,6 +7,8 @@ Kelas: [5Ikra]
 
 ---
 
+![Setup GitHub](screenshots/repo_setup.png)
+
 ## 1. Tujuan
 (Pembelajaran praktikum bertujuan untuk memahami dasar teori dan menerapkan algoritma kriptografi klasik serta modern melalui pembuatan kode enkripsi dan dekripsi. Praktikum ini juga bertujuan meningkatkan kemampuan analisis dan implementasi algoritma kriptografi dalam pengamanan pesan.)
 
@@ -70,9 +72,9 @@ Integritas Data (Data Integrity): Kriptografi memastikan bahwa data tidak beruba
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc123456234213
-Author: Kingkin Kurnia Candrawati <email>
-Date:   2025-09-5
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+commit 899b237910cfa08c768cde5a1f7d6a1015a15cb2
+Author: ichannndraa <164720047+ichannn24@users.noreply.github.com>
+Date:   Wed Oct 8 21:15:41 2025 +0700
+
 ```
