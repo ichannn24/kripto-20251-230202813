@@ -104,6 +104,7 @@ print("Discrete log of 4 base 3 mod 7 =", discretelog(3, 4, 7))
 - Bahas error (jika ada) dan solusinya. 
 
 Hasil eksekusi program Caesar Cipher:
+https://github.com/ichannn24/kripto-20251-230202813/blob/b864d28e5080f39f3677ec85668ac27fd3b387cb/praktikum/week3-modmath-gcd/Cuplikan%20layar%202025-11-04%20152921.png
 - Program berjalan sesuai ekspektasi dengan hasil operasi modular yang tepat.
 - GCD antara 54 dan 24 adalah 6, sesuai teori.
 - Invers modular 3 mod 11 adalah 4, yang benar karena (3 * 4) mod 11 = 1.
