@@ -104,6 +104,11 @@ print("Discrete log of 4 base 3 mod 7 =", discretelog(3, 4, 7))
 - Bahas error (jika ada) dan solusinya. 
 
 Hasil eksekusi program Caesar Cipher:
+- Program berjalan sesuai ekspektasi dengan hasil operasi modular yang tepat.
+- GCD antara 54 dan 24 adalah 6, sesuai teori.
+- Invers modular 3 mod 11 adalah 4, yang benar karena (3 * 4) mod 11 = 1.
+- Logaritma diskrit 4 basis 3 mod 7 didapatkan x=4, artinya 3 4 ≡ 4 ( m o d 7 ) 3 4 ≡4(mod7).
+- Tidak ditemukan error selama eksekusi.
 
 ![Hasil Eksekusi](screenshots/output.png)
 ![Hasil Input](screenshots/input.png)
@@ -114,13 +119,19 @@ Hasil eksekusi program Caesar Cipher:
 
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
+- Pertanyaan 1: Apa peran aritmetika modular dalam kriptografi modern?
+Aritmetika modular memungkinkan operasi matematik yang melibatkan sisa pembagian, yang sangat efisien dan aman untuk enkripsi dan dekripsi dalam kriptografi kunci publik.
+- Pertanyaan 2: Mengapa invers modular penting dalam algoritma kunci publik seperti RSA?
+Invers modular digunakan untuk membalikkan operasi perkalian dalam modul tertentu sehingga memungkinkan dekripsi pesan yang dienkripsi.
+- Pertanyaan 3: Apa tantangan utama dalam menyelesaikan logaritma diskrit untuk modulus besar?
+Logaritma diskrit sulit dihitung secara efisien untuk modulus besar yang membuatnya menjadi dasar keamanan algoritma seperti Diffie-Hellman dan ElGamal.
 )
 ---
 
 ## 8. Kesimpulan
 (Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+Praktikum ini memperkuat pemahaman operasi dasar aritmetika modular, GCD, invers modular, dan logaritma diskrit. Implementasi program Python menunjukkan konsep tersebut dapat diaplikasikan langsung dan berfungsi sesuai teori kriptografi.
+
 
 ---
 
@@ -137,8 +148,8 @@ Contoh:
 Contoh:
 ```
 commit abc12345
-Author: Nama Mahasiswa <email>
+Author: Kingkin Kurnia Candrawati <kurniachandra2404@gmail.com>
 Date:   2025-09-20
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+    week3-cryptosystem: implementasi Caesar Cipher dan laporan )
 ```
