@@ -71,7 +71,7 @@ Unicity Distance untuk Caesar Cipher = 0.3
 Waktu brute force Caesar Cipher (26 kunci) = 0.0000003 hari
 Waktu brute force AES-128 = 1.078e+30 hari
 
-
+hasil run vscode : https://github.com/ichannn24/kripto-20251-230202813/blob/84efe9ef1573dcdb2c7b97f63882a6095a70e50e/praktikum/week4-entropy-unicity/Screenshot%202025-11-13%20221705.png
 ## 7. Jawaban Pertanyaan
 1. Apa arti dari nilai entropy dalam konteks kekuatan kunci?
 Entropi menunjukkan tingkat ketidakpastian atau keacakan suatu kunci. Semakin tinggi entropi, semakin sulit bagi penyerang untuk menebak kunci dengan benar.
