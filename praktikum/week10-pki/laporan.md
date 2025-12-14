@@ -78,7 +78,8 @@ print("Sertifikat digital berhasil dibuat: cert.pem")
 
 ## 6. Hasil dan Pembahasan
 Hasil dari praktikum ini menunjukkan bahwa sertifikat digital sederhana berhasil dibuat menggunakan library cryptography. Program berjalan tanpa error dan menghasilkan file sertifikat dengan ekstensi .pem.
-Sertifikat yang dihasilkan merupakan self-signed certificate, di mana subject dan issuer berasal dari entitas yang sama. Hal ini cukup untuk keperluan pembelajaran, namun tidak direkomendasikan untuk lingkungan produksi karena tidak melibatkan CA tepercaya. Screenshot hasil eksekusi program disimpan pada folder screenshots/.
+Sertifikat yang dihasilkan merupakan self-signed certificate, di mana subject dan issuer berasal dari entitas yang sama. Hal ini cukup untuk keperluan pembelajaran, namun tidak direkomendasikan untuk lingkungan produksi karena tidak melibatkan CA tepercaya. Screenshot hasil eksekusi program disimpan pada folder screenshots/. 
+https://github.com/ichannn24/kripto-20251-230202813/blob/8b71f24819fe83acaf539a999f88babe16214595/praktikum/week10-pki/Screenshot%202025-12-14%20235915.png
 
 
 ## 7. Jawaban Pertanyaan
