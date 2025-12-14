@@ -1,95 +1,109 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 10 
+Topik: [Public Key Infrastructure (PKI & Certificate Authority)]  
+Nama: [Kingkin Kurnia Candrawati]  
+NIM: [230202813]  
+Kelas: [5 IKRA]  
 
----
+
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
-
----
-
+Tujuan dari praktikum ini adalah untuk memahami konsep Public Key Infrastructure (PKI) serta peran Certificate Authority (CA) dalam sistem keamanan informasi. Selain itu, praktikum ini bertujuan untuk mengimplementasikan pembuatan sertifikat digital sederhana dan memahami proses verifikasi sertifikat dalam komunikasi aman.
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Public Key Infrastructure (PKI) adalah sebuah kerangka kerja yang digunakan untuk mengelola kunci publik dan sertifikat digital dalam sistem keamanan. PKI memungkinkan pengguna untuk bertukar informasi secara aman dengan memanfaatkan pasangan kunci publik dan privat yang diverifikasi melalui sertifikat digital.
 
----
+Certificate Authority (CA) merupakan pihak tepercaya yang bertugas menerbitkan, memverifikasi, dan mengelola sertifikat digital. Sertifikat digital berisi identitas pemilik kunci publik dan ditandatangani oleh CA untuk menjamin keaslian identitas tersebut. Dengan adanya CA, pengguna dapat mempercayai bahwa kunci publik yang digunakan memang milik pihak yang sah.
+
+PKI banyak digunakan dalam sistem keamanan modern seperti HTTPS dan TLS pada komunikasi internet. Melalui PKI, risiko serangan seperti Man-in-the-Middle (MITM) dapat diminimalkan karena identitas server dapat diverifikasi menggunakan sertifikat digital yang sah.
 
 ## 3. Alat dan Bahan
-(- Python 3.x  
+- Python 
 - Visual Studio Code / editor lain  
 - Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
-
----
 
 ## 4. Langkah Percobaan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
+Membuat folder praktikum/week10-pki/ beserta subfolder src dan screenshots.
 
----
+Menginstal library cryptography dan pyopenssl menggunakan perintah pip install cryptography pyopenssl.
+
+Membuat file pki_cert.py di dalam folder src.
+
+Menuliskan kode program untuk generate pasangan kunci RSA.
+
+Membuat sertifikat digital sederhana (self-signed certificate).
+
+Menyimpan sertifikat dalam format .pem.
+
+Menjalankan program dan memastikan sertifikat berhasil dibuat.
+
+Mengambil screenshot hasil eksekusi program.
+
+Melakukan commit hasil praktikum ke repository GitHub.
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
+from cryptography import x509
+from cryptography.x509.oid import NameOID
+from cryptography.hazmat.primitives import hashes, serialization
+from cryptography.hazmat.primitives.asymmetric import rsa
+from datetime import datetime, timedelta
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
+# Generate key pair
+key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+
+# Subject dan issuer (self-signed CA)
+subject = issuer = x509.Name([
+    x509.NameAttribute(NameOID.COUNTRY_NAME, u"ID"),
+    x509.NameAttribute(NameOID.ORGANIZATION_NAME, u"UPB Kriptografi"),
+    x509.NameAttribute(NameOID.COMMON_NAME, u"example.com"),
+])
+
+# Membuat sertifikat digital
+cert = (
+    x509.CertificateBuilder()
+    .subject_name(subject)
+    .issuer_name(issuer)
+    .public_key(key.public_key())
+    .serial_number(x509.random_serial_number())
+    .not_valid_before(datetime.utcnow())
+    .not_valid_after(datetime.utcnow() + timedelta(days=365))
+    .sign(key, hashes.SHA256())
 )
 
----
+# Simpan sertifikat
+with open("cert.pem", "wb") as f:
+    f.write(cert.public_bytes(serialization.Encoding.PEM))
+
+print("Sertifikat digital berhasil dibuat: cert.pem")
+
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
+Hasil dari praktikum ini menunjukkan bahwa sertifikat digital sederhana berhasil dibuat menggunakan library cryptography. Program berjalan tanpa error dan menghasilkan file sertifikat dengan ekstensi .pem.
+Sertifikat yang dihasilkan merupakan self-signed certificate, di mana subject dan issuer berasal dari entitas yang sama. Hal ini cukup untuk keperluan pembelajaran, namun tidak direkomendasikan untuk lingkungan produksi karena tidak melibatkan CA tepercaya. Screenshot hasil eksekusi program disimpan pada folder screenshots/.
 
-Hasil eksekusi program Caesar Cipher:
-
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
-
----
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
----
+Pertanyaan 1: Apa fungsi utama Certificate Authority (CA)?
+CA berfungsi sebagai pihak tepercaya yang menerbitkan dan memverifikasi sertifikat digital untuk menjamin keaslian identitas pemilik kunci publik.
+Pertanyaan 2: Mengapa self-signed certificate tidak cukup untuk sistem produksi?
+Karena sertifikat tersebut tidak diverifikasi oleh CA tepercaya sehingga tingkat kepercayaannya rendah dan rentan terhadap serangan keamanan.
+Pertanyaan 3: Bagaimana PKI mencegah serangan MITM dalam TLS/HTTPS?
+PKI memastikan identitas server melalui sertifikat digital yang diverifikasi CA, sehingga klien dapat mendeteksi sertifikat palsu dan mencegah komunikasi dengan pihak tidak sah.
+
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
-
----
+Dari praktikum ini dapat disimpulkan bahwa PKI dan CA memiliki peran penting dalam menjaga keamanan komunikasi digital. Pembuatan sertifikat digital berhasil dilakukan dan menunjukkan bagaimana identitas dapat diverifikasi. PKI terbukti menjadi fondasi utama dalam sistem keamanan komunikasi modern.
 
 ## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
+•	Stallings, W. Cryptography and Network Security.
 
----
+•	Katz, J., & Lindell, Y. Introduction to Modern Cryptography.
+
+•	Stinson, D. Cryptography: Theory and Practice.
+
 
 ## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
-Contoh:
-```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+commit e5f6g7h8
+Author: Kingkin Kurnia Candrawati <kurniachandra2404@gmail.com>
+Date:   2025-11-XX
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
-```
+    week10-pki
