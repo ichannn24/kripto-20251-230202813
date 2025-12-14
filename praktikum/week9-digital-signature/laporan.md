@@ -78,7 +78,7 @@ except (ValueError, TypeError):
 ## 6. Hasil dan Pembahasan
 Berdasarkan hasil eksekusi program, tanda tangan digital berhasil dibuat menggunakan kunci privat RSA. Proses verifikasi terhadap pesan asli menunjukkan hasil berhasil, yang menandakan bahwa tanda tangan valid dan pesan tidak mengalami perubahan.
 Pada pengujian kedua, pesan dimodifikasi dan dilakukan verifikasi menggunakan tanda tangan yang sama. Hasilnya, verifikasi gagal, yang membuktikan bahwa tanda tangan digital mampu mendeteksi perubahan isi pesan. Hal ini sesuai dengan teori bahwa tanda tangan digital menjamin integritas dan keaslian pesan.
-
+https://github.com/ichannn24/kripto-20251-230202813/blob/b3907b20f5ffcc46886a38ecc37084257012a4de/praktikum/week9-digital-signature/src/Screenshot%202025-12-14%20232549.png
 
 ## 7. Jawaban Pertanyaan
 Pertanyaan 1: Apa perbedaan utama antara enkripsi RSA dan tanda tangan digital RSA?
