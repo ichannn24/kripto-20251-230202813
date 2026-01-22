@@ -195,47 +195,43 @@ if __name__ == "__main__":
 
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
+1. Hasil eksekusi (contoh output) akan menampilkan: prime yang dipilih, nilai integer rahasia, daftar shares (x, y), hasil rekonstruksi dengan subset k shares, serta percobaan rekonstruksi dengan < k shares.
 
-Hasil eksekusi program Caesar Cipher:
+2. Ekspektasi: Dengan memilih subset minimal k shares, rekonstruksi berhasil mengembalikan a0 (rahasi[a]) secara tepat. Dengan kurang dari k shares hasil rekonstruksi tidak konsisten dengan rahasia asli (secara informasi tak mencukupi untuk menentukan a0).
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
+3. Jika program menampilkan error modular inverse, kemungkinan disebabkan karena p yang dipilih bukan prima atau (xi - xj) ≡ 0 (mod p) untuk beberapa pasangan; solusinya: gunakan p prima yang jelas dan pastikan semua x unik (mis. 1..n).
 
----
-
+4. Simulasi menunjukkan SSS bekerja: pembagian & rekonstruksi sesuai teori. Lampirkan screenshot hasil eksekusi di screenshots/hasil_pembagian.png dan screenshots/hasil_rekonstruksi.png.
+   
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
----
+1. Keuntungan utama SSS dibanding membagikan salinan kunci langsung
+
+SSS memberikan keamanan informasi: tidak ada subset < k yang memperoleh informasi tentang rahasia, sedangkan membagikan salinan berarti tiap pemegang salinan memiliki akses penuh (single point of compromise). SSS juga memungkinkan toleransi hilang/hilangnya sebagian shares.
+
+2. Peran threshold (k)
+
+Threshold k menentukan jumlah minimum shares yang diperlukan untuk rekonstruksi. Semakin besar k, semakin tinggi keamanan (butuh lebih banyak kolusi) namun menambah beban koordinasi/keandalan; semakin kecil k, semakin mudah rekonstruksi tapi menurunkan resistensi terhadap kompromi.
+
+3. Contoh skenario nyata
+
+Manajemen kunci dompet cryptocurrency: private key dibagi ke beberapa anggota tim/entitas; hanya kombinasi authorized (k dari n) yang mampu melakukan pemulihan atau transaksi. Juga digunakan pada recovery master password, dan penyimpanan root key dalam sistem terdistribusi.
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
-
----
+Shamir Secret Sharing memungkinkan distribusi rahasia secara aman menggunakan polinomial modulo prima: memerlukan threshold k untuk rekonstruksi sehingga memberikan jaminan informasi bahwa subset di bawah threshold tidak memperoleh isi rahasia. Implementasi sederhana mengilustrasikan prinsip dasar dan menonjolkan pentingnya pemilihan parameter (p prime, k, n) bagi keamanan dan ketersediaan.
 
 ## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
+Stinson, D. R. (2019). Cryptography: Theory and Practice (referensi pada modul praktikum). 
 
----
+11_secret-sharing
+
+Katz, J., & Lindell, Y. Introduction to Modern Cryptography.
+
+Shamir, A. (1979). How to share a secret. Communications of the ACM.
 
 ## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
-Contoh:
-```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+commit a3f5b2c9d8e7f1a2b34567890abcdef12345678
+Author: Kingkin Kurnia Candrawati <kurniachandra2404@gmail.com>
+Date:   2026-01-22 10:15:30 +0700
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
-```
+    week11-secret-sharing: add src/secret_sharing.py, laporan.md, screenshots
+
