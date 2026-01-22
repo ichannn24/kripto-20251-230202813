@@ -100,6 +100,8 @@ c. Error / Kendala
 
 Saat menjalankan script Python, beberapa domain menolak koneksi langsung karena SNI (Server Name Indication) atau firewall restriction. Solusi: gunakan library requests dengan parameter verify=True atau gunakan openssl s_client untuk observasi manual.
 
+https://github.com/ichannn24/kripto-20251-230202813/blob/2787432bd498f3a83194ce1eee7f8025fa655244/praktikum/week12-aplikasi-tls/src/sertifikat%20tls%20tokped.png
+
 ## 7. Jawaban Pertanyaan
 1. Apa perbedaan utama antara HTTP dan HTTPS?
 HTTP mentransfer data tanpa enkripsi, sehingga bisa disadap atau diubah pihak ketiga. HTTPS menggunakan protokol TLS untuk mengenkripsi data, menjamin keamanan dan integritas komunikasi antara klien dan server.
