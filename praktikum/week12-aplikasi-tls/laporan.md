@@ -36,11 +36,10 @@ Dalam konteks e-commerce, TLS digunakan untuk mengamankan transaksi seperti logi
    praktikum/week12-aplikasi-tls/
 ├─ screenshots/
 └─ laporan.md
+
 2. Mengunjungi beberapa situs e-commerce melalui browser, contoh:
 
 https://www.tokopedia.com
-
-https://www.shopee.co.id
 
 3. Membuka informasi sertifikat digital dengan klik ikon gembok → Connection is secure → Certificate.
 Catat:
