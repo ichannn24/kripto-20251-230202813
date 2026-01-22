@@ -202,6 +202,8 @@ if __name__ == "__main__":
 3. Jika program menampilkan error modular inverse, kemungkinan disebabkan karena p yang dipilih bukan prima atau (xi - xj) ≡ 0 (mod p) untuk beberapa pasangan; solusinya: gunakan p prima yang jelas dan pastikan semua x unik (mis. 1..n).
 
 4. Simulasi menunjukkan SSS bekerja: pembagian & rekonstruksi sesuai teori. Lampirkan screenshot hasil eksekusi di screenshots/hasil_pembagian.png dan screenshots/hasil_rekonstruksi.png.
+
+https://github.com/ichannn24/kripto-20251-230202813/blob/524276f1563a217a739b1b15a92b211e6788e467/praktikum/week11-secret-sharing/src/Screenshot%202026-01-22%20204040.png
    
 ## 7. Jawaban Pertanyaan
 1. Keuntungan utama SSS dibanding membagikan salinan kunci langsung
