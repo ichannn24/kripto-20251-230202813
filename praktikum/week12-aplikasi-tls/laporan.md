@@ -1,9 +1,9 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 12 
+Topik: [Aplikasi TLS & E-commerce]  
+Nama: [Kingkin Kurnia Candrawati]  
+NIM: [230202813]  
+Kelas: [5 IKRA]  
 
 ---
 
